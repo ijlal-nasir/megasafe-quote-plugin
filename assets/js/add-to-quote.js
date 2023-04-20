@@ -24,6 +24,7 @@ jQuery(document).ready(function () {
 
     console.log("added_products :>> ", added_products);
 
+    // Move this to a function
     let addtoquote_list =
       '<table id="msatq_quote_table" class="table"><thead><tr><th></th><th>Image</th><th>Product</th><th class="qty_head">Qty</th></tr></thead><tbody>';
     for (var list = 0; list < added_products.length; list++) {
@@ -52,7 +53,7 @@ jQuery(document).ready(function () {
     jQuery("#modal-quote-list-row").removeClass("elementdisplaynone");
     jQuery(".no-quote-in-list").addClass("elementdisplaynone");
     jQuery("#msatq_message_after_submission").addClass("elementdisplaynone");
-    var width = screen.width;
+    // var width = screen.width;
     let current_product_id = jQuery(this).attr("data-product-id");
     let product_title = jQuery(".postid-" + current_product_id + "")
       .find(".product_title")
@@ -97,6 +98,7 @@ jQuery(document).ready(function () {
       );
     }
     if (added_products.length > 0) {
+      // Move this to a function
       addtoquote_modal_body +=
         '<table id="msatq_quote_table" class="table"><thead><tr><th></th><th>Image</th><th>Product</th><th class="qty_head">Qty</th></tr></thead><tbody>';
       for (var added = 0; added < added_products.length; added++) {

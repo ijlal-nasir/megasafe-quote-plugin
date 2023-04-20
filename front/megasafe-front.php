@@ -113,11 +113,11 @@ if (!class_exists('msatq_MegaSafe__FRONT')) {
 					</div>
 					<div id="empty-quote-list-wrapper" class="no-quote-in-list">
 						<h4 class="msatq_message_tagline">Its empty!</h4>
-						<p class="msatq_byline">Add an item to your quotes list!</p>
+						<p class="msatq_byline text-center">Add an item to your quotes list!</p>
 					</div>
 					<div id="msatq_message_after_submission" class="elementdisplaynone">
 						<h4 class="msatq_message_tagline">Your quote has been successfully submitted</h4>
-						<p class="msatq_byline">A Megasafe representative will reach out to you as soon as possible and help you fulfill your order!</p>
+						<p class="msatq_byline text-center">A Megasafe representative will reach out to you as soon as possible and help you fulfill your order!</p>
 					</div>
 				</div>
 				</div>
