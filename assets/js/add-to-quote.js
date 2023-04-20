@@ -21,6 +21,9 @@ jQuery(document).ready(function () {
     jQuery("#modal-quote-list-row").removeClass("elementdisplaynone");
     jQuery(".no-quote-in-list").addClass("elementdisplaynone");
     added_products = JSON.parse(added_products);
+
+    console.log("added_products :>> ", added_products);
+
     let addtoquote_list =
       '<table id="msatq_quote_table" class="table"><thead><tr><th></th><th>Image</th><th>Product</th><th class="qty_head">Qty</th></tr></thead><tbody>';
     for (var list = 0; list < added_products.length; list++) {
@@ -28,7 +31,7 @@ jQuery(document).ready(function () {
         '<tr class="not-border"><td><svg class="msatq_delete_quote" id="' +
         added_products[list][0] +
         '" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></td><td><img class="msatq_quoted_pro_img" src="' +
-        added_products[list][2] +
+        added_products[list][4] +
         '"></td><td><a href="' +
         added_products[list][4] +
         '" class="mstq_product_title">' +
@@ -40,9 +43,10 @@ jQuery(document).ready(function () {
         '"></td></tr><tr class="border-located"></tr>';
     }
     addtoquote_list += "</tbody></table>";
-    jQuery("#quotes_added_product_list").html(addtoquote_list);
+    // jQuery("#quotes_added_product_list").html(addtoquote_list);
     jQuery(".quote-item-count").html(added_products.length);
   }
+
   jQuery("body").on("click", "#msatq_addtoquote", function () {
     var added_products = localStorage.getItem("added_addtoquote_products");
     jQuery("#modal-quote-list-row").removeClass("elementdisplaynone");
